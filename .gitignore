@@ -1,0 +1,2 @@
+//git ignore serve para adicionar os arquivos que não sao desejaveis/que não podem ir pro no repositorio
+package-lock.json
