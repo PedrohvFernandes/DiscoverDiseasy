@@ -1,0 +1,27 @@
+Elaborar no mínimo 2 questionários guia para entrevistas com os usuários do Sistema. 
+
+O questionário consiste em conseguir responder as seguintes questões:
+
+1- Encontrar a causa raiz do problema do usuário
+
+2- Avaliar o seu nível de satisfação atual com alguma solução concorrente ou similar
+
+3-Validar se o usuário estaria disposto a usar o seu sistema
+
+ 
+
+Os questionários devem ser criados via Google Forms, enviado para possíveis usuários e apurado as estatísticas relacionadas às perguntas.
+
+Elaborar um documento contendo:
+
+1- Os Questionários
+
+2- A apuração da pesquisa (exemplo: número de respostas, percentuais de apuração de cada resposta, média, mediana, etc)
+
+Link do(s) questionario(s):https://docs.google.com/forms/d/191Pr95wjbM7iKD584Yo3tsABCcsyX0MVf9okyTomuVE/edit?usp=sharing --Estudante
+
+			   https://docs.google.com/forms/d/1FAs_uKpP_BzptJQ7Xr1yRzbL-eKMvXkMbCgAI631Vb8/edit?usp=sharing --Pessoa
+
+			   Link:https://forms.gle/Ja8xjdU1VnyKuNbr5 --Estudante Link encurtado:https://bit.ly/DiscoverDiseasy1
+			   
+			   Link: https://forms.gle/mKAGBBMZCMW1vys36 --Pessoa Link encurtado: https://bit.ly/DiscoverDiseasy2
