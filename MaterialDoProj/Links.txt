@@ -6,6 +6,6 @@ Link do figma com a apresentação e protoipos:Material no figma: https://www.fi
 
 Modo Apresentação: https://www.figma.com/proto/ck5lu0WhC2vxVFavnhRpjO/Discover-Diseasy?node-id=426%3A533&scaling=min-zoom
 
-Link do Mapa mental projeto Discover Diseasy:https://miro.com/app/board/o9J_lSXZjLI=/?fromRedirect=1
+Link do Mapa mental projeto Diseasy:https://miro.com/app/board/o9J_lSXZjLI=/?fromRedirect=1
 
 Link do Mapa mental dos usuarios envolvidos:https://miro.com/app/board/o9J_leAyWTs=/
