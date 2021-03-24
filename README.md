@@ -1,2 +1,2 @@
 # DiscoverDiseasy
- --Aprenda como nunca antes a cuidar do seu bem estar--
+ --Aprenda tudo sobre doenças do melhor jeito, conversando.--
