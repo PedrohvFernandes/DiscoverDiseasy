@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     30/04/2021 15:25:49                          */
+/* Created on:     01/05/2021 08:32:33                          */
 /*==============================================================*/
 
 
@@ -33,19 +33,6 @@ create table DOENCA
 
 alter table DOENCA
    add primary key (COD_DOENCA);
-
-/*==============================================================*/
-/* Table: DOENCA_INFORMACAO_HOSPITAL                            */
-/*==============================================================*/
-create table DOENCA_INFORMACAO_HOSPITAL
-(
-   COD_DOENCA_INFORMACAO_HOSPITAL int not null,
-   COD_INFORMACAO_HOSPITAL int not null,
-   COD_DOENCA           int not null
-);
-
-alter table DOENCA_INFORMACAO_HOSPITAL
-   add primary key (COD_DOENCA_INFORMACAO_HOSPITAL);
 
 /*==============================================================*/
 /* Table: EMAIL_CONTATO                                         */
@@ -139,6 +126,19 @@ create table REGISTRO_DE_ATIVIDADES
 
 alter table REGISTRO_DE_ATIVIDADES
    add primary key (COD_ATIVIDADES);
+
+/*==============================================================*/
+/* Table: REGISTRO_DE_ATIVIDADES_DOENCA                         */
+/*==============================================================*/
+create table REGISTRO_DE_ATIVIDADES_DOENCA
+(
+   COD_REGISTRO_DE_ATIVIDADES_DOENCA int not null auto_increment,
+   COD_DOENCA           int not null,
+   COD_ATIVIDADES       int not null
+);
+
+alter table REGISTRO_DE_ATIVIDADES_DOENCA
+   add primary key (COD_REGISTRO_DE_ATIVIDADES_DOENCA);
 
 /*==============================================================*/
 /* Table: RELATAR_PROBLEMA                                      */
@@ -239,12 +239,6 @@ alter table DETALHAMENTO_DOENCA add constraint FK_DOENCA_DETALHAMENTO_DOENCA for
 alter table DOENCA add constraint FK_TIPO_DOENCA_DOENCA foreign key (COD_TIPO_DOENCA)
       references TIPO_DOENCA (COD_TIPO_DOENCA);
 
-alter table DOENCA_INFORMACAO_HOSPITAL add constraint FK_DOENCA_DOENCA_INFORMACAO_HOSPITAL foreign key (COD_DOENCA)
-      references DOENCA (COD_DOENCA);
-
-alter table DOENCA_INFORMACAO_HOSPITAL add constraint FK_INFORMCAO_HOSPITAL_DOENCA_INFORMACAO_HOSPITAL foreign key (COD_INFORMACAO_HOSPITAL)
-      references INFORMACAO_HOSPITAL (COD_INFORMACAO_HOSPITAL);
-
 alter table EMAIL_CONTATO add constraint FK_HOSPITAL_EMAIL_CONTATO foreign key (COD_INFORMACAO_HOSPITAL)
       references INFORMACAO_HOSPITAL (COD_INFORMACAO_HOSPITAL);
 
@@ -265,6 +259,12 @@ alter table QUANTIDADE_DE_USO add constraint FK_USUARIO_QUANTIDADE_DE_USO foreig
 
 alter table REGISTRO_DE_ATIVIDADES add constraint FK_USUARIO_REGISTRO_DE_ATIVIDADES foreign key (COD_USUARIO)
       references USUARIO (COD_USUARIO);
+
+alter table REGISTRO_DE_ATIVIDADES_DOENCA add constraint FK_DOENCA_REGISTRO_DE_ATIVIDADES foreign key (COD_DOENCA)
+      references DOENCA (COD_DOENCA);
+
+alter table REGISTRO_DE_ATIVIDADES_DOENCA add constraint FK_REGISTRO_DE_ATIVIDADES_REGISTRO_DE_ATIVIDADES_DOENCA_ foreign key (COD_ATIVIDADES)
+      references REGISTRO_DE_ATIVIDADES (COD_ATIVIDADES);
 
 alter table RELATAR_PROBLEMA add constraint FK_USUARIO_RELATAR_PROBLEMA foreign key (COD_USUARIO)
       references USUARIO (COD_USUARIO);
