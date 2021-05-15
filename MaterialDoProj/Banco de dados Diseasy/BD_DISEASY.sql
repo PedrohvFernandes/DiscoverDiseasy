@@ -1,8 +1,38 @@
 /*==============================================================*/
 /* DBMS name:      MySQL 5.0                                    */
-/* Created on:     01/05/2021 08:32:33                          */
+/* Created on:     14/05/2021 21:15:03                          */
 /*==============================================================*/
 
+
+drop table if exists DETALHAMENTO_DOENCA;
+
+drop table if exists DOENCA;
+
+drop table if exists EMAIL_CONTATO;
+
+drop table if exists INFORMACAO_HOSPITAL;
+
+drop table if exists MENSAGENS_POR_USUARIO;
+
+drop table if exists MENSAGENS_PREDEFINIDAS;
+
+drop table if exists PROFESSOR;
+
+drop table if exists QUANTIDADE_DE_USO;
+
+drop table if exists RELATAR_PROBLEMA;
+
+drop table if exists TELEFONE_CONTATO;
+
+drop table if exists TIPO_DOENCA;
+
+drop table if exists TIPO_EMAIL_CONTATO;
+
+drop table if exists TIPO_TELEFONE_CONTATO;
+
+drop table if exists USUARIO;
+
+drop table if exists USUARIO_INFORMACAO_HOSPITAL;
 
 /*==============================================================*/
 /* Table: DETALHAMENTO_DOENCA                                   */
@@ -113,32 +143,6 @@ create table QUANTIDADE_DE_USO
 
 alter table QUANTIDADE_DE_USO
    add primary key (COD_QUANTIDADE_VEZES);
-
-/*==============================================================*/
-/* Table: REGISTRO_DE_ATIVIDADES                                */
-/*==============================================================*/
-create table REGISTRO_DE_ATIVIDADES
-(
-   COD_ATIVIDADES       int not null auto_increment,
-   COD_USUARIO          int not null,
-   DAT_ATIVIDADE        date not null
-);
-
-alter table REGISTRO_DE_ATIVIDADES
-   add primary key (COD_ATIVIDADES);
-
-/*==============================================================*/
-/* Table: REGISTRO_DE_ATIVIDADES_DOENCA                         */
-/*==============================================================*/
-create table REGISTRO_DE_ATIVIDADES_DOENCA
-(
-   COD_REGISTRO_DE_ATIVIDADES_DOENCA int not null auto_increment,
-   COD_DOENCA           int not null,
-   COD_ATIVIDADES       int not null
-);
-
-alter table REGISTRO_DE_ATIVIDADES_DOENCA
-   add primary key (COD_REGISTRO_DE_ATIVIDADES_DOENCA);
 
 /*==============================================================*/
 /* Table: RELATAR_PROBLEMA                                      */
@@ -256,15 +260,6 @@ alter table PROFESSOR add constraint FK_USUARIO_PROFESSOR foreign key (COD_USUAR
 
 alter table QUANTIDADE_DE_USO add constraint FK_USUARIO_QUANTIDADE_DE_USO foreign key (COD_USUARIO)
       references USUARIO (COD_USUARIO);
-
-alter table REGISTRO_DE_ATIVIDADES add constraint FK_USUARIO_REGISTRO_DE_ATIVIDADES foreign key (COD_USUARIO)
-      references USUARIO (COD_USUARIO);
-
-alter table REGISTRO_DE_ATIVIDADES_DOENCA add constraint FK_DOENCA_REGISTRO_DE_ATIVIDADES foreign key (COD_DOENCA)
-      references DOENCA (COD_DOENCA);
-
-alter table REGISTRO_DE_ATIVIDADES_DOENCA add constraint FK_REGISTRO_DE_ATIVIDADES_REGISTRO_DE_ATIVIDADES_DOENCA_ foreign key (COD_ATIVIDADES)
-      references REGISTRO_DE_ATIVIDADES (COD_ATIVIDADES);
 
 alter table RELATAR_PROBLEMA add constraint FK_USUARIO_RELATAR_PROBLEMA foreign key (COD_USUARIO)
       references USUARIO (COD_USUARIO);
