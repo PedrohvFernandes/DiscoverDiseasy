@@ -8,7 +8,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Hospital {
-
+	
+	private String nomeHospital;
+	
 	private String descricaoHospital;
 
 	private String imagemMapa;
@@ -19,8 +21,9 @@ public class Hospital {
 
 	private List<Hospital> hospitais;
 
-	public Hospital(String descricaoHospital, String imagemMapa, String telefoneHospital, String emailsHospital) {
+	public Hospital(String nomeHospital, String descricaoHospital, String imagemMapa, String telefoneHospital, String emailsHospital) {
 		
+		this.nomeHospital = nomeHospital;
 		this.descricaoHospital = descricaoHospital;
 		this.imagemMapa = imagemMapa;
 		this.telefoneHospital = telefoneHospital;
@@ -28,7 +31,14 @@ public class Hospital {
 		this.hospitais = new ArrayList<>();
 		
 	}
-
+	
+	public String getNomeHospital() {
+		return nomeHospital;
+	}
+	
+	public void setNomeHospital(String nomeHospital) {
+		this.nomeHospital = nomeHospital;
+	}
 
 	public String getDescricaoHospital() {
 		return descricaoHospital;

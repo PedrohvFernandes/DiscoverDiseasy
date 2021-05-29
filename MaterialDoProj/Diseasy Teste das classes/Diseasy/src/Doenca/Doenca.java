@@ -48,8 +48,7 @@ public class Doenca {
 
 	@Override
 	public String toString() {
-		return "Doenca [nomeDoenca=" + nomeDoenca + ", descricaoDoenca=" + descricaoDoenca + ", doencas=" + doencas
-				+ "]";
+		return "Doenca [nomeDoenca=" + nomeDoenca + ", descricaoDoenca=" + descricaoDoenca +"]";
 	}
 
 	/**
